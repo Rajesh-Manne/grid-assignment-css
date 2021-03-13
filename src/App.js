@@ -1,23 +1,26 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Gallery from './components/Gallery'
+// import 'bootstrap/dist/css/bootstrap.min.css';
 
-function App() {
+function App(){
+  const [results,setResult] = React.useState([]);
+ 
+ const fetchImages = async ()=> {
+  fetch('https://reqres.in/api/users/')
+  .then(response => response.json())
+  .then(data => setResult(data.data));
+}
+  
+React.useEffect(() => {
+  fetchImages();
+}, [])
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    
+        <Gallery results={results} />
+        
+
     </div>
   );
 }
