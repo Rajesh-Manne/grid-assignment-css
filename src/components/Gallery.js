@@ -18,14 +18,14 @@ export default function Gallery(props)
                         alt="..."
                     />
                     <div className="card-body">
-                        <h5 className="card-title">{item.first_name}</h5>
-                        <h5 className="card-title">{item.last_name}</h5>
+                        <h5 className="card-firstname">{item.first_name}</h5>
+                        <h5 className="card-lastname">{item.last_name}</h5>
                         <p className="card-email">{item.email}</p> 
                     </div>
                 </div>
                     
                 )
-            })
+            });
                 }
             
             </div>
