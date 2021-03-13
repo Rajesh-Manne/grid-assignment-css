@@ -25,7 +25,7 @@ export default function Gallery(props)
                 </div>
                     
                 )
-            });
+            })
                 }
             
             </div>
