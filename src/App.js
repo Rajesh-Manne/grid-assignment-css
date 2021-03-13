@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import Gallery from './components/Gallery'
-// import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function App(){
   const [results,setResult] = React.useState([]);
@@ -17,11 +17,8 @@ React.useEffect(() => {
 }, [])
   return (
     <div className="App">
-    
-        <Gallery results={results} />
-        
-
-    </div>
+       <Gallery results={results} />
+   </div>
   );
 }
 

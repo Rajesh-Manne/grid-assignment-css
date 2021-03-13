@@ -1,5 +1,5 @@
 
-
+/* xl devices */
 @media screen and (min-width: 1200px) {
  
 .cards {
@@ -28,6 +28,7 @@ margin:5rem 10rem;
   }
 }
 
+/* s,m and l devices */
 @media screen and  (min-width:576px) and (max-width:1200px){
  
   .cards {
@@ -53,7 +54,7 @@ margin:5rem 10rem;
     }
   }
 
-  /*  */
+  /* xs devices  */
 
   @media screen and (max-width:576px){
  
